@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>域名SEO后台管理 -- Powered by Marsn9</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Form.css"/>
+    <script type="text/javascript" src="__PUBLIC__/Js/jQuery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Base.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Form.js"></script>
+</head>
+<body>
+    <div class="main">
+        <form class="form" action="{:U('Setting/admin')}">
+            <div class="title">系统设置 - 管理员密码</div>
+            <div class="row">
+                <label>管理员登录名：</label>
+                <input type="text" name="username" value="{$data.username}" required="required"/>
+            </div>
+            <div class="row">
+                <label>原密码：</label>
+                <input type="password" name="password_original" required="required"/>
+            </div>
+            <div class="row">
+                <label>新密码：</label>
+                <input type="password" name="password" placeholder="不修改密码请留空。"/>
+            </div>
+            <div class="row">
+                <label>确认新密码：</label>
+                <input type="password" name="password_confirm" placeholder="请重复输入新密码。"/>
+            </div>
+            <div class="rowBtn">
+                <input type="submit" class="ajaxBtn" value="保&nbsp;存"/>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

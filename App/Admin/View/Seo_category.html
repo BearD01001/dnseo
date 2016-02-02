@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>域名SEO后台管理 - Powered by Marsn9</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Form.css"/>
+    <script type="text/javascript" src="__PUBLIC__/Js/jQuery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Base.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Form.js"></script>
+</head>
+<body>
+<div class="body">
+    <div class="main">
+        <form class="form" action="#">
+            <div class="title">SEO - 分类页设置</div>
+            <div class="row">
+                <label class="tipst">分类页&nbsp;Keyword：<div class="tips">位于首页&nbsp;Keyword&nbsp;之后，三级关键词</div></label>
+                <input type="text" name="keyword" value="{$data.keyword}" placeholder="请以半角“逗号”分隔各个关键词。"/>
+            </div>
+            <div class="row">
+                <label class="tipst">动态布局周期：<div class="tips">分类页更新布局内容，请视蜘蛛采集情况选择适当的更新周期。</div></label>
+                <input type="radio" id="layout_5" name="layout" value="0.5"<if condition="$data['layout'] eq '0.5'"> checked="checked"</if>/> <label for="layout_5">12小时</label>
+                <input type="radio" id="layout1" name="layout" value="1"<if condition="$data['layout'] eq '1'"> checked="checked"</if>/> <label for="layout1">1天</label>
+                <input type="radio" id="layout3" name="layout" value="3"<if condition="$data['layout'] eq '3'"> checked="checked"</if>/> <label for="layout3">3天</label>
+                <input type="radio" id="layout7" name="layout" value="7"<if condition="$data['layout'] eq '7'"> checked="checked"</if>/> <label for="layout7">7天</label>
+            </div>
+            <div class="row">
+                <label>其他所有分类：</label>
+                <input type="radio" id="other_category_on" name="other_category" value="1"<if condition="$data['other_category'] eq '1'"> checked="checked"</if>/> <label for="other_category_on">显示</label>
+                <input type="radio" id="other_category_off" name="other_category" value="0"<if condition="$data['other_category'] eq '0'"> checked="checked"</if>/> <label for="other_category_off">不显示</label>
+            </div>
+            <div class="row">
+                <label>分页选项：</label>
+                <input type="radio" id="page_off" name="page" value="0"<if condition="$data['page'] eq '0'"> checked="checked"</if>/> <label for="page_off">不分页</label>
+                <input type="radio" id="page_20" name="page" value="20"<if condition="$data['page'] eq '20'"> checked="checked"</if>/> <label for="page_20">每页20</label>
+                <input type="radio" id="page_40" name="page" value="40"<if condition="$data['page'] eq '40'"> checked="checked"</if>/> <label for="page_40">每页40</label>
+                <input type="radio" id="page_60" name="page" value="60"<if condition="$data['page'] eq '60'"> checked="checked"</if>/> <label for="page_60">每页60</label>
+                <input type="radio" id="page_80" name="page" value="80"<if condition="$data['page'] eq '80'"> checked="checked"</if>/> <label for="page_80">每页80</label>
+                <input type="radio" id="page_100" name="page" value="100"<if condition="$data['page'] eq '100'"> checked="checked"</if>/> <label for="page_100">每页100</label>
+            </div>
+            <div class="row">
+                <label>分页类型：</label>
+                <input type="radio" id="page_type_num" name="page_type" value="num"<if condition="$data['page_type'] eq 'num'"> checked="checked"</if>/> <label for="page_type_num">数字</label>
+                <input type="radio" id="page_type_ajax" name="page_type" value="ajax"<if condition="$data['page_type'] eq 'ajax'"> checked="checked"</if>/> <label for="page_type_ajax">AJAX</label>
+            </div>
+            <div class="btnRow">
+                <input type="submit" class="ajaxBtn" value="保&nbsp;存"/>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

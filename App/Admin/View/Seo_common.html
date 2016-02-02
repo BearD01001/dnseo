@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>域名SEO后台管理 -- Powered by Marsn9</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Form.css"/>
+    <script type="text/javascript" src="__PUBLIC__/Js/jQuery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Base.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Form.js"></script>
+</head>
+<body>
+    <div class="main">
+        <form class="form" action="#">
+            <div class="title">SEO - 基本设置</div>
+            <div class="row">
+                <label class="tipst">全局&nbsp;Keyword：<div class="tips">该关键词优先所有其他关键词，排序占首位，一级关键词。</div></label>
+                <input type="text" name="keyword" value="{$data.keyword}" placeholder="请以半角“逗号”分隔各个关键词。"/>
+            </div>
+            <div class="row">
+                <label class="tipst">多主域名侧重：<div class="tips">若多个相似域名做米表主域名，请添加其一为侧重域名。</div></label>
+                <input type="text" name="mult_domain" value="{$data.mult_domain}" placeholder="请填写域名主体(xxx.com)"/>
+            </div>
+            <div class="row">
+                <label class="tipst">全局重定向：<div class="tips">将所有米表域名的访问全部重定向至主域名。</div></label>
+                <input type="radio" id="redirect_on" name="redirect" value="1"<if condition="$data['redirect'] eq '1'"> checked="checked"</if>/> <label for="redirect_on">开启</label>
+                <input type="radio" id="redirect_off" name="redirect" value="0"<if condition="$data['redirect'] eq '0'"> checked="checked"</if>/> <label for="redirect_off">关闭</label>
+            </div>
+            <div class="row">
+                <label>URL&nbsp;模式：</label>
+                <input type="radio" id="url_mode_pathinfo" name="url_mode" value="pathinfo"<if condition="$data['url_mode'] eq 'pathinfo'"> checked="checked"</if>/> <label for="url_mode_pathinfo">Pathinfo模式</label>
+                <input type="radio" id="url_mode_rewrite" name="url_mode" value="rewrite"<if condition="$data['url_mode'] eq 'rewrite'"> checked="checked"</if>/> <label for="url_mode_rewrite">Rewrite模式</label>
+                <input type="radio" id="url_mode_compatible" name="url_mode" value="compatible"<if condition="$data['url_mode'] eq 'compatible'"> checked="checked"</if>/> <label for="url_mode_compatible">兼容模式</label>
+                <input type="radio" id="url_mode_common" name="url_mode" value="common"<if condition="$data['url_mode'] eq 'common'"> checked="checked"</if>/> <label for="url_mode_common">普通模式</label>
+            </div>
+            <div class="row">
+                <label>伪静态：</label>
+                <input type="radio" id="rewrite_on" name="rewrite" value="1"<if condition="$data['rewrite'] eq '1'"> checked="checked"</if>/> <label for="rewrite_on">开启</label>
+                <input type="radio" id="rewrite_off" name="rewrite" value="0"<if condition="$data['rewrite'] eq '0'"> checked="checked"</if>/> <label for="rewrite_off">关闭</label>
+            </div>
+            <div class="row">
+                <label>Sitemap：</label>
+                <input type="radio" id="sitemap_on" name="sitemap" value="1"<if condition="$data['sitemap'] eq '1'"> checked="checked"</if>/> <label for="sitemap_on">开启</label>
+                <input type="radio" id="sitemap_off" name="sitemap" value="0"<if condition="$data['sitemap'] eq '0'"> checked="checked"</if>/> <label for="sitemap_off">关闭</label>
+            </div>
+            <div class="row">
+                <label>Sitemap&nbsp;选项：</label>
+                <input type="checkbox" id="sitemap_compress" name="sitemap_compress" value="1"<if condition="$data['sitemap_compress'] eq '1'"> checked="checked"</if>/> <label for="sitemap_compress">压缩</label>
+                <input type="checkbox" id="sitemap_nohtml" name="sitemap_nohtml" value="1"<if condition="$data['sitemap_compress'] eq '1'"> checked="checked"</if>> <label for="sitemap_nohtml"/>
+                忽略Stiemap.html </label>
+                <select id="sitemap_priority" name="sitemap_priority">
+                    <option value="0"<if condition="$data['sitemap_priority'] eq '0'"> selected="selected"</if>>自动</option>
+                    <option value="0.1"<if condition="$data['sitemap_priority'] eq '0.1'"> selected="selected"</if>>0.1</option>
+                    <option value="0.2"<if condition="$data['sitemap_priority'] eq '0.2'"> selected="selected"</if>>0.2</option>
+                    <option value="0.3"<if condition="$data['sitemap_priority'] eq '0.3'"> selected="selected"</if>>0.3</option>
+                    <option value="0.4"<if condition="$data['sitemap_priority'] eq '0.4'"> selected="selected"</if>>0.4</option>
+                    <option value="0.5"<if condition="$data['sitemap_priority'] eq '0.5'"> selected="selected"</if>>0.5</option>
+                    <option value="0.6"<if condition="$data['sitemap_priority'] eq '0.6'"> selected="selected"</if>>0.6</option>
+                    <option value="0.7"<if condition="$data['sitemap_priority'] eq '0.7'"> selected="selected"</if>>0.7</option>
+                    <option value="0.8"<if condition="$data['sitemap_priority'] eq '0.8'"> selected="selected"</if>>0.8</option>
+                    <option value="0.9"<if condition="$data['sitemap_priority'] eq '0.9'"> selected="selected"</if>>0.9</option>
+                    <option value="1"<if condition="$data['sitemap_priority'] eq '1'"> selected="selected"</if>>1</option>
+                </select> <label for="sitemap_priority">优先级</label>
+                <select id="sitemap_changefreq" name="sitemap_changefreq">
+                    <option value="always"<if condition="$data['sitemap_changefreq'] eq 'always'"> selected="selected"</if>>经常</option>
+                    <option value="hourly"<if condition="$data['sitemap_changefreq'] eq 'hourly'"> selected="selected"</if>>每小时</option>
+                    <option value="daily"<if condition="$data['sitemap_changefreq'] eq 'daily'"> selected="selected"</if>>每天</option>
+                    <option value="weekly"<if condition="$data['sitemap_changefreq'] eq 'weekly'"> selected="selected"</if>>每周</option>
+                    <option value="monthly"<if condition="$data['sitemap_changefreq'] eq 'monthly'"> selected="selected"</if>>每月</option>
+                    <option value="yearly"<if condition="$data['sitemap_changefreq'] eq 'yearly'"> selected="selected"</if>>每年</option>
+                    <option value="never"<if condition="$data['sitemap_changefreq'] eq 'never'"> selected="selected"</if>>从不</option>
+                </select> <label for="sitemap_changefreq">更新频率</label>
+            </div>
+            <div class="row">
+                <label>友链&nbsp;Nofollow：</label>
+                <input type="radio" id="nofollow_on" name="nofollow" value="1"<if condition="$data['nofollow'] eq '1'"> checked="checked"</if>/> <label for="nofollow_on">开启</label>
+                <input type="radio" id="nofollow_off" name="nofollow" value="0"<if condition="$data['nofollow'] eq '0'"> checked="checked"</if>/> <label for="nofollow_off">关闭</label>
+            </div>
+            <div class="rowBtn">
+                <input type="submit" class="ajaxBtn" value="保&nbsp;存"/>
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,24 @@
+[ 2016-01-24T16:39:10+08:00 ] 127.0.0.1 /admin.php/domain/add.html
+ERR: 1048:Column 'category' cannot be null
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`price`,`time`,`category`) VALUES ('WearPlus.com','0','','','','0','1453624750',NULL)
+ERR: 1048:Column 'category' cannot be null
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`price`,`time`,`category`) VALUES ('WearPlus.com','0','','','','0','1453624750',NULL)
+
+[ 2016-01-24T17:04:57+08:00 ] 127.0.0.1 /admin.php/domain/add.html
+ERR: 1364:Field 'label' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`category`,`price`,`time`) VALUES ('WearPlus.com','0','','','','20','0','1453626297')
+ERR: 1364:Field 'label' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`category`,`price`,`time`) VALUES ('WearPlus.com','0','','','','20','0','1453626297')
+
+[ 2016-01-24T17:11:28+08:00 ] 127.0.0.1 /admin.php/domain/add.html
+ERR: 1364:Field 'label' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`category`,`price`,`time`) VALUES ('WearPlus.com','0','','','','20','0','1453626688')
+ERR: 1364:Field 'label' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`category`,`price`,`time`) VALUES ('WearPlus.com','0','','','','20','0','1453626688')
+
+[ 2016-01-24T18:12:45+08:00 ] 127.0.0.1 /admin.php/domain/add.html
+ERR: 1364:Field 'label' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`category`,`price`,`time`) VALUES ('WearPlus.com','0','','','','8','0','1453630365')
+ERR: 1364:Field 'label' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `m9_domain_my` (`domain`,`id`,`desc`,`keyword`,`pic`,`category`,`price`,`time`) VALUES ('WearPlus.com','0','','','','8','0','1453630365')
+
