@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{:$homeInfo['domain']},域名出售,域名购买,高流量域名,高权重域名 - {:$homeInfo['name']}</title>
+    <meta name="keywords" content="{:$homeSEO['keyword']}"/>
+    <meta name="description" content="{:$homeSEO['meta_desc']}"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Home/Base.css"/>
+    <script src="__PUBLIC__/Js/jquery-1.11.2.min.js"></script>
+    <script src="__PUBLIC__/Js/Plugins/jquery.nicescroll.min.js"></script>
+    <script src="__PUBLIC__/Js/Base.js"></script>
+    <script src="__PUBLIC__/Js/Home/Home_Base.js"></script>
+</head>
+<body>
+	<div class="header">
+		<img class="logo" alt="{:$homeInfo['name']}" src="__PUBLIC__/Img/logo.png">
+		<div class="slogan">{:$homeInfo['slogan']}</div>
+		<div class="contact">
+			<ul>
+				<li>电话：<span>{:$homeInfo['tel']}</span></li>
+				<li>邮箱：<span>{:$homeInfo['email']}</span></li>
+				<li>QQ：<span><a href="http://wpa.qq.com/msgrd?v=3&uin={:$homeInfo['qq']}&site={:$homeInfo['domain']}&menu=no">{:$homeInfo['qq']}</a></span></li>
+			</ul>
+		</div>
+	</div>
+    <php>$r = rand(1, 6);</php>
+	<div class="nav bg0<php>echo $r;</php>">
+		<ul>
+			<li><a href="/">首页</a></li>
+            <foreach name="cateItem" item="c">
+                <li><a href="/{:$c['id']}">{:$c['name']}</a></li>
+            </foreach>
+            <li class="all"><a href="#"><span class="icon-grid-view"></span>全部分类</a>
+                <div>
+                    <ul>
+                        <foreach name="AllCate" item="c">
+                            <li><a href="/{:$c['id']}">{:$c['name']}</a></li>
+                        </foreach>
+                    </ul>
+                </div>
+            </li>
+            <li class="cur l0"></li>
+		</ul>
+	</div>

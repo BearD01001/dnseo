@@ -1,0 +1,118 @@
+@CHARSET "UTF-8";
+/* domain list */
+.name {
+	width: 80%;
+	margin: 20px auto -20px auto;
+	.margin-bottom: -10px;
+}
+.title {
+	display: block;
+	height: 50px;
+	width: 100px;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 50px;
+	position: absolute;
+	top: 0;
+	left: -100px;
+}
+.name ul {
+	width: 100%;
+}
+.name li {
+	display: inline-block;
+	.float: left;
+	width: 220px;
+	height: 220px;
+	margin: 0 10px 20px;
+	overflow: hidden;
+}
+.name img {
+	width: 220px;
+	height: 220px;
+}
+.name strong {
+	font-family: Cambria, Verdana, Georgia, serif, "微软雅黑", "宋体";
+	color: #FFF;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 10px 5px;
+	margin: 0;
+	font-weight: bolder;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	opacity: .8;
+	filter: alpha(opacity=80); 
+	cursor: pointer;
+}
+@keyframes shake {
+	0% {}
+	25% {font-size: 20px;transform: rotate(10deg);}
+	50% {font-size: 20px;transform: rotate(-10deg);}
+	75% {font-size: 20px;transform: rotate(10deg);}
+	100% {font-size: 18px;transform: rotate(0);}
+}
+@-webkit-keyframes shake {
+    0% {}
+    25% {font-size: 20px;-webkit-transform: rotate(10deg);}
+    50% {font-size: 20px;-webkit-transform: rotate(-10deg);}
+    75% {font-size: 20px;-webkit-transform: rotate(10deg);}
+    100% {font-size: 18px;-webkit-transform: rotate(0);}
+}
+.name li:hover strong b {
+	display: block;
+	.font-size: 20px;
+	animation: shake .8s;
+	-webkit-animation: shake .8s;
+}
+.name strong span {
+	font-size: 12px;
+	border-left: solid rgba(0,0,0,.3) 1px;
+	margin-left: 5px;
+	padding-left: 5px;
+	color: #FFF;
+	opacity: .8;
+	filter: alpha(opacity=80); 
+	cursor: pointer;
+}
+.name em {
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	padding: 0 5px;
+	color: #FFF;
+	text-align: left;
+	line-height: 23px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	opacity: .8;
+	filter: alpha(opacity=80); 
+	cursor: pointer;
+}
+.more {
+	opacity: .3;
+	filter: alpha(opacity=30);
+}
+.more a {
+}
+.more img {
+	width: 100%;
+	opacity: .5;
+	filter: alpha(opacity=50); 
+	transition: left .5s;
+	-webkit-transition: left .5s;
+}
+.more:hover img {
+	left: 5%;
+	.width: 110%;
+	.height: 110%;
+	.top: -5%;
+	.left: -5%;
+}
+.r90 {
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
