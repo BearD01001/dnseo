@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>域名SEO后台管理 -- Powered by Marsn9</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Css/Admin/Index_frame.css"/>
+    <script type="text/javascript">
+        window.public = "__PUBLIC__";
+    </script>
+    <script type="text/javascript" src="__PUBLIC__/Js/jQuery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Base.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Js/Admin/Index_frame.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="__PUBLIC__/Img/logo.png">
+        <div>
+            <span>{:$username}<a id="logout" href="{:U('Login/logout')}">退出</a></span>
+            <span>上次登录时间：{:$logintime}</span>
+            <span>上次登录IP：{:$loginip}</span>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><em><span class="icon-cog"></span>系统设置</em>
+                <a href="{:U('Setting/common')}">米表基本设置</a>
+                <a href="{:U('Setting/admin')}">管理员密码</a>
+                <a href="{:U('Setting/link')}">友情链接管理</a>
+                <!--<a href="{:U('Setting/mysql')}">数据库备份/还原</a>-->
+            </li>
+            <li><em><span class="icon-share-3"></span>SEO设置</em>
+                <a href="{:U('Seo/common')}">基本设置</a>
+                <a href="{:U('Seo/home')}">首页设置</a>
+                <a href="{:U('Seo/category')}">分类页设置</a>
+                <a href="{:U('Seo/sellPage')}">域名出售页设置</a>
+            </li>
+            <li><em><span class="icon-list_nested"></span>域名管理</em>
+                <a href="{:U('Domain/my')}">我的域名</a>
+                <a href="{:U('Domain/category')}">域名分类管理</a>
+                <a href="{:U('Domain/add')}">添加域名</a>
+                <a href="{:U('Domain/bulk')}">批量添加域名</a>
+                <a href="{:U('Domain/import')}">导入域名</a>
+                <a href="{:U('Domain/unadd')}">链入未添加域名</a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <iframe id="frame" name="frame" class="frame" src="{:U('Admin/home')}"></iframe>
+    </div>
+</body>
+</html>
