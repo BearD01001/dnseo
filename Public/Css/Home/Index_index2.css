@@ -342,6 +342,7 @@ html {
     background: #FFF;
     border-bottom: 3px solid red;
     width: 100%;
+    opacity: .95;
     z-index: 1;
 }
 .photo-wall h3 {

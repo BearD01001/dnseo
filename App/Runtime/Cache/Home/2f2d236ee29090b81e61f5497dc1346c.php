@@ -23,7 +23,7 @@
 			</ul>
 		</div>
 	</div>
-    <?php $r = rand(1, 6); ?>
+<?php $r = rand(1, 6); ?>
 	<div class="nav bg0<?php echo $r; ?>">
 		<ul>
 			<li><a href="/">首页</a></li>
@@ -38,7 +38,6 @@
             <li class="cur l0"></li>
 		</ul>
 	</div>
-
 
 <link rel="stylesheet" type="text/css" href="/Public/Js/Plugins/justifiedGallery.min.css"/>
 <link rel="stylesheet" type="text/css" href="/Public/Css/Home/Index_index2.css"/>
