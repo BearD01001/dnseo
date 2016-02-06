@@ -1,9 +1,3 @@
-#RewriteEngine On
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteRule ^(\d*)$ index.php/Index/index/cat/$1 [QSA,PT,L]
-#RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
-#
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
@@ -28,7 +22,7 @@ RewriteCond %{HTTP_HOST} ^(127.0.0.10|www.huitaomi.com) [NC]
 RewriteRule ^(\d+)$ index.php/Index/index/cat/$1 [QSA,PT,L]
 
 #最终容错去index.php
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 </IfModule>
