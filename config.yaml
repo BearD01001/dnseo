@@ -1,2 +1,7 @@
 handle:
+#  出售域名访问重写
+  - rewrite: if(!is_dir() && !is_file() && path~"^([a-z0-9][-a-z0-9]{0,62}(\.[a-z0-9][-a-z0-9]{0,62})+)$) goto "index.php/Domain/detail/domain/$1"
+#  目录地址重写
+  - rewrite: if(!is_dir() && !is_file() && path~"^(\d+)$) goto "index.php/Index/index/cat/$1"
+#  去index.php
   - rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
