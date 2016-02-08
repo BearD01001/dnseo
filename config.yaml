@@ -4,4 +4,4 @@ handle:
 #  目录地址重写
   - rewrite: if(!is_dir() && !is_file() && path~"^(\d+)$) goto "index.php/Index/index/cat/$1"
 #  去index.php
-#  - rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
+  - rewrite: if(!is_dir() && !is_file() && path~"^(.*)$") goto "index.php/$1"
