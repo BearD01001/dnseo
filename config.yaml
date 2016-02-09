@@ -5,4 +5,3 @@ handle:
   - rewrite: if(!is_dir() && !is_file() && path ~ "^([-a-zA-Z0-9]{0,62}\.[-a-zA-Z0-9]{0,62}+)$") goto "index.php/Domain/detail/domain/$1"
 #  目录地址重写
   - rewrite: if(!is_dir() && !is_file() && path ~ "^(\d+)$") goto "index.php/Index/index/cat/$1"
-#  去index.php
