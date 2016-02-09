@@ -1,0 +1,10 @@
+# PhpStorm cache directory:
+.idea/
+
+# ThinkPHP App runtime directory:
+App/Runtime/
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
