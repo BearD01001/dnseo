@@ -3,3 +3,6 @@
 
 # ThinkPHP App runtime directory:
 App/Runtime/
+
+# App Config
+App/Common/Conf/config.php
