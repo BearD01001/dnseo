@@ -25,6 +25,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     filter: blur(50px);
+    -webkit-filter: blur(50px);
 }
 .main > h1 {
     -webkit-transition: transform .5s;-moz-transition: transform .5s;-ms-transition: transform .5s;-o-transition: transform .5s;transition: transform .5s;
@@ -201,6 +202,7 @@ button#buynow {
     font-size: 260px;
     text-align: center;
     filter: blur(30px);
+    -webkit-filter: blur(30px);
     opacity: 1;
     -webkit-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
