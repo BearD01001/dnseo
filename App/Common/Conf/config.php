@@ -14,5 +14,5 @@ return array(
     'URL_HTML_SUFFIX' => 'html',
     /*载入数据库配置文件*/
     'DB_PREFIX' => 'm9_',	    // 数据库表前缀
-//    'LOAD_EXT_CONFIG' => 'mysql'
+    'LOAD_EXT_CONFIG' => 'mysql'
 );
