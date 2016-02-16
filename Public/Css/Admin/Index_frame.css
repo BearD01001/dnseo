@@ -88,11 +88,11 @@ body {
     color: rgba(255, 255, 255, .9);
     text-indent: 3em;
     position: relative;
-    transition: left .5s;
+    transition: margin-left .5s;
 }
 
 .menu li a:hover {
-    left: -5px;
+    margin-left: -5px;
 }
 
 /* 页内框架 */
@@ -103,8 +103,6 @@ body {
     right: 0;
     bottom: 0;
     left: 290px;
-    /*background: #99CCFF url("../../Img/admin_bg_bubble.png") repeat-y center;*/
-    /*background-size: 100%;*/
     background: #99CCFF url("../../Img/admin_bg.png") no-repeat bottom right;
     background-size: 70% 100%;
 }

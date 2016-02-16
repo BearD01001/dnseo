@@ -19,7 +19,6 @@ html, body {
 .table caption a {
     margin: 0 0 -5px !important;
     float: right;
-    right: -10%;
 }
 .table thead {
     color: #FFFFCC;

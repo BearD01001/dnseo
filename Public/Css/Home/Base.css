@@ -110,13 +110,14 @@
     width: 250%;
 }
 .nav li.all a + div ul {
-    width: 100%;
+    width: 90%;
     top: 10px;
     overflow: visible;
     transition: all .3s;
     height: 0;
     opacity: 0;
     background: rgba(0,0,0,.5);
+    padding: 0 5%;
 }
 .nav li.all:hover a + div ul {
     height: 200px;

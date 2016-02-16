@@ -2,27 +2,6 @@
 Namespace Home\Controller;
 Use Think\Controller;
 Class IndexController Extends HomeController {
-//    Public function index(){
-//    	$domain = $_SERVER['HTTP_HOST'];
-//    	$domain = str_replace('www.','',$domain);
-//
-//    	$this->domain = $domain;
-//    	$this->display();
-//    }
-////    Protected function categorySort($list, $parent = array()) {
-////        static $category = array();
-////        foreach($parent as $v) {
-////
-////        }
-////        foreach($list as $v) {
-////            if($v['parent'] == $parent) {
-////                $v['sort'] = $level;
-////                $category[] = $v;
-////                $this->categorySort($list, $v['id']);
-////            }
-////        }
-////        return $category;
-////    }
     Public function index(){
         $db = M('seo_home');
         $res = $db->find();

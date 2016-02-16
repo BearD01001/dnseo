@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dino9
- * Date: 15-4-26
- * Time: 下午10:28
- */
 Namespace Home\Controller;
 Use Think\Controller;
 Class HomeController Extends Controller {
@@ -19,9 +13,9 @@ Class HomeController Extends Controller {
         $this->homeSEO = $res;
 
         $db = M('domain_category');
-        $res = $db->select();
+        $res = $db->order('name, sort')->select();
         $this->AllCate = $res;
-        $res = $db->where(array('parent' => 0))->order('sort')->select();
+        $res = $db->where(array('parent' => 0))->order('name, sort')->limit(0, 8)->select();
         $this->cateItem = $res;
     }
 }
