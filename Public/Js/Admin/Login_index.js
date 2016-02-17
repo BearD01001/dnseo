@@ -27,4 +27,6 @@ $(document).ready(function() {
         );
         return false;
     });
+
+    $(".login input[name=username]").focus();
 });
