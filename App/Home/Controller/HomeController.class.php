@@ -17,5 +17,15 @@ Class HomeController Extends Controller {
         $this->AllCate = $res;
         $res = $db->where(array('parent' => 0))->order('name, sort')->limit(0, 8)->select();
         $this->cateItem = $res;
+
+        $order = 0;
+        $cateId = I('get.cat');
+        if(!empty($cateId)) {
+            foreach($res as $i) {
+                $order++;
+                if($i['id'] == $cateId) break;
+            }
+        }
+        $this->cateOrder = $order;
     }
 }

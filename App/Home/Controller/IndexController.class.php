@@ -6,13 +6,15 @@ Class IndexController Extends HomeController {
         $db = M('seo_home');
         $res = $db->find();
         $homeSEO = $res;
-        $category = I('get.cat');
-        if(!empty($category)) {
-
+        $condition = '';
+        $catId = I('get.cat');
+        if(!empty($catId)) {
+            $condition = 'id = ' . $catId;
+            $db = M('domain_my');
+            $domainItem[$catId] = $db->where('category LIKE "%' . $catId . '%"')->select();
         } else {
             $categoryArr = explode(',', $homeSEO['category']);
             $domainItem = array();
-            $condition = '';
             $db = M('domain_my');
             $count = count($categoryArr);
             foreach($categoryArr as $k => $c) {
@@ -20,11 +22,12 @@ Class IndexController Extends HomeController {
                 $domainItem[$c] = $res;
                 $condition .= ($k + 1 == $count) ? 'id = ' . $c : 'id = ' . $c . ' OR ';
             }
-            $db = M('domain_category');
-            $res = $db->where($condition)->order('sort')->select();
-            $domainItem['cateItem'] = $res;
-            $this->domainItem = $domainItem;
         }
+        $db = M('domain_category');
+        $res = $db->where($condition)->order('sort')->select();
+        $domainItem['cateItem'] = $res;
+        $this->domainItem = $domainItem;
+//        }
         $this->display('index2');
     }
     Public function classify(){

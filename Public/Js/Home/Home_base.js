@@ -5,7 +5,6 @@ $(document).ready(function() {
     /* 导航滚动到窗口顶部后固定 */
     $(function() {
         var elm = $('.nav');
-        var itemCon = $('.photo-wall');
         var startPos = $(elm).offset().top;
         $.event.add(window, "scroll", function() {
             var p = $(window).scrollTop();

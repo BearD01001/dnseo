@@ -335,6 +335,19 @@ html {
     width: 80%;
     margin: 73px auto 20px;
 }
+.photo-wall:before {
+    content: ' ';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: transparent url('../../Img/admin_frame_bg.png') no-repeat -192px -187px;
+    -webkit-background-size: 43.75%;
+    background-size: 43.75%;
+    z-index: 1;
+    pointer-events: none;
+}
 .photo-wall .item-bar {
     position: absolute;
     top: -20px;
@@ -365,7 +378,7 @@ html {
 }
 .domains {
     padding-bottom: 24px;
-    background: #FFF;
+    /*background: #FFF;*/
 }
 .domains .no-domain {
     position: absolute;
