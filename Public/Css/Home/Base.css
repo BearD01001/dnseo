@@ -166,20 +166,23 @@
     margin: 20px;
     z-index: 3;
 }
-.links a:link {
+.links {
+    height: 30px;
+}
+.links a {
     display: inline-block;
     width: 80px;
-    height: 20px;
+    height: 30px;
     line-height: 20px;
-    color: #CCCCFF;
-    transition: font-size .5s;
+    color: #6C6C6C;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
 }
 .links a:hover {
-    font-size: 16px;
-    font-weight: bolder;
-}
-.links a:visited {
-    color: #CCCCFF;
+    opacity: .8;
 }
 .about {
     color: #3399CC;

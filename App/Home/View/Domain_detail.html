@@ -6,14 +6,24 @@
             <div class="domain"><img src="{$domain['pic']}" alt="daifubao.com"></div>
             <p>{$domain['desc']}</p>
             <section>
-                <div class="buy"><button id="chatonline">在线联系</button><button id="buynow">立即购买</button><button id="mailprice">邮件询价</button></div>
+                <div class="buy">
+                    <a class="chat-online" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=848123450&site=qq&menu=yes" target="_blank">在线联系</a>
+                    <a class="buy-now">立即购买</a>
+                    <a class="budding" href="mailto:{:$homeInfo['email']}?Subject=%e4%bd%a0%e5%a5%bd%ef%bc%8c%0a%20%20%20%20%e8%af%b7%e9%97%ae%20{$domain['domain']}%20%e8%bf%99%e4%b8%aa%e5%9f%9f%e5%90%8d%e5%a4%9a%e5%b0%91%e9%92%b1%e8%bd%ac%e8%ae%a9%ef%bc%9f%0a--%5b%e6%82%a8%e7%9a%84%e7%a7%b0%e5%91%bc%5d
+">邮件询价</a>
+                </div>
             </section>
         <else/>
             <span>{$domain['domain']|preg_replace='/\\..*/','',###}</span>
             <figure>
                 <div>
                     <h1>{$domain['domain']}</h1>
-                    <div class="buy"><button id="chatonline">在线联系</button><button id="buynow">立即购买</button><button id="mailprice">邮件询价</button></div>
+                    <div class="buy">
+                        <a class="chat-online" rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=848123450&site=qq&menu=yes" target="_blank">在线联系</a>
+                        <a class="buy-now">立即购买</a>
+                        <a class="budding" href="mailto:{:$homeInfo['email']}?Subject=%e4%bd%a0%e5%a5%bd%ef%bc%8c%0a%20%20%20%20%e8%af%b7%e9%97%ae%20{$domain['domain']}%20%e8%bf%99%e4%b8%aa%e5%9f%9f%e5%90%8d%e5%a4%9a%e5%b0%91%e9%92%b1%e8%bd%ac%e8%ae%a9%ef%bc%9f%0a--%5b%e6%82%a8%e7%9a%84%e7%a7%b0%e5%91%bc%5d
+">邮件询价</a>
+                    </div>
                 </div>
                 <figcaption>
                     <span>{$domain['domain']}</span>
@@ -23,7 +33,5 @@
             </figure>
         </if>
 	</div>
-    <div class="bidding">
 
-    </div>
 <include file="Public:footer"/>

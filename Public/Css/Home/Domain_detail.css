@@ -65,6 +65,7 @@
     height: 300px;
     border-radius: 150px;
     z-index: -1;
+    pointer-events: none;
 }
 .main:hover .domain:after {
     -webkit-animation: sonarEffect 2s infinite ease-out .5s;
@@ -146,7 +147,8 @@
 .buy {
 	padding: 0 10%;
 }
-.buy button {
+.buy a {
+    display: inline-block;
 	width: 30%;
 	height: 48px;
 	font-size: 24px;
@@ -157,12 +159,23 @@
 	bottom: -6px;
     cursor: pointer;
     border: none;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
 }
-button#buynow {
+.buy a.buy-now {
 	height: 60px;
 	line-height: 60px;
 	background: #FF6600;
 	bottom: 0;
+}
+.buy a:hover {
+    opacity: .8;
+}
+.buy a:active {
+    opacity: .6;
 }
 .main section {
     width: 100%;

@@ -18,7 +18,7 @@
 		<div class="contact">
 			<ul>
 				<li>电话：<span>{:$homeInfo['tel']}</span></li>
-				<li>邮箱：<span>{:$homeInfo['email']}</span></li>
+				<li>邮箱：<span><a href="mailto:{:$homeInfo['email']}">{:$homeInfo['email']}</a></span></li>
 				<li>QQ：<span><a href="http://wpa.qq.com/msgrd?v=3&uin={:$homeInfo['qq']}&site={:$homeInfo['domain']}&menu=no">{:$homeInfo['qq']}</a></span></li>
 			</ul>
 		</div>
