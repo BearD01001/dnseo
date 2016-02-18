@@ -342,7 +342,7 @@ html {
     left: 0;
     width: 100%;
     height: 500px;
-    background: transparent url('../../Img/admin_frame_bg.png') no-repeat -192px -187px;
+    background: transparent url('../../Img/home_header_bg_2.png') no-repeat -190px -193px;
     -webkit-background-size: 43.75%;
     background-size: 43.75%;
     z-index: 1;
@@ -439,6 +439,7 @@ html {
     border-bottom-left-radius: 16px;
     font-size: 20px;
     padding: 5px 8px;
+    z-index: 2;
     transition: top .5s;
     -moz-transition: top .5s;
     -webkit-transition: top .5s;
