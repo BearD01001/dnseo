@@ -347,6 +347,7 @@ html {
     background-size: 43.75%;
     z-index: 1;
     pointer-events: none;
+    opacity: .6;
 }
 .photo-wall .item-bar {
     position: absolute;
@@ -439,7 +440,7 @@ html {
     border-bottom-left-radius: 16px;
     font-size: 20px;
     padding: 5px 8px;
-    z-index: 2;
+    z-index: 1;
     transition: top .5s;
     -moz-transition: top .5s;
     -webkit-transition: top .5s;
