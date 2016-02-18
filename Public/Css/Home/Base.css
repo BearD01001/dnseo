@@ -7,6 +7,7 @@ body {
     background: transparent url('../../Img/home_header_bg.png') no-repeat 2px 5px;
     -webkit-background-size: 35%;
     background-size: 35%;
+    overflow: inherit;
 }
 /* header */
 .header {
@@ -62,6 +63,7 @@ body {
     background: transparent url('../../Img/home_header_bg_2.png') no-repeat 2px -121px;
     -webkit-background-size: 35%;
     background-size: 35%;
+    opacity: .6;
 }
 .nav ul {
     width: 80%;
