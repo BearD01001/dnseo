@@ -15,7 +15,7 @@
                         <a href="/{$domain['domain']}" class="bd0{$r}" target="_blank">
                             <img src=<if condition="$domain['pic'] eq ''">"/Public/Img/none-img.png"<else/>"{$domain['pic']}"</if> />
                             <b class=<if condition="$domain['pic'] eq ''">"no-img"<else/>"img"</if>>{$domain['domain']}</b>
-                            <p class=<if condition="$domain['pic'] eq ''">"no-img"<else/>"caption img"</if>>{$domain['desc']}</p>
+                            <if condition="$domain['desc'] neq ''"><p class=<if condition="$domain['pic'] eq ''">"no-img"<else/>"caption img"</if>>{$domain['desc']}</p></if>
                         </a>
                     </foreach>
                 <else/>
