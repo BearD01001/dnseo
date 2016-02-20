@@ -475,3 +475,120 @@ html {
     font-size: 14px;
     font-weight: bold;
 }
+/*
+    移动端适配
+*/
+@media only screen and (max-width: 1024px) {
+    body {
+        background: none;
+    }
+    .header .slogan {
+        display: none;
+    }
+    .header .contact {
+        display: none;
+    }
+    .header .logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+        margin-top: 0;
+        z-index: 3;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        height: 60px;
+    }
+    .nav ul li {
+        display: none;
+    }
+    .nav ul li.all {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 60px;
+        width: auto;
+        line-height: 60px;
+        padding: 0 30px;
+     }
+    .nav ul li.all em {
+        display: none;
+    }
+    .nav ul li.all div {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, .2);
+        opacity: 0;
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        -ms-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+    }
+    .nav ul li.all div.active {
+        display: block;
+        opacity: 1;
+    }
+    .nav ul li.all div ul {
+        position: absolute;
+        top: 0;
+        right: -16em;
+        bottom: 0;
+        width: 16em;
+        height: auto !important;
+        padding: 0;
+        opacity: 1;
+        -webkit-transition: right .5s;
+        -moz-transition: right .5s;
+        -ms-transition: right .5s;
+        -o-transition: right .5s;
+        transition: right .5s;
+    }
+    .nav ul li.all div.active ul {
+        right: 0;
+    }
+    .nav ul li.all div ul li {
+        display: block;
+        height: auto;
+        font-size: 16px;
+        float: none;
+        opacity: 1;
+    }
+    .photo-wall {
+        width: auto;
+        margin: -55px 1.5% 0;
+    }
+    .photo-wall .domain-item {
+        margin-top: 30px;
+    }
+    .photo-wall .domain-item h3 {
+        top: -8px;
+        left: 0;
+        right: initial;
+        border: none;
+    }
+    .photo-wall .domain-item .domains {
+        padding-bottom: 0;
+    }
+    .photo-wall .domain-item .domains a {
+        display: inline-block;
+        width: 49% !important;
+        height: 240px;
+        margin: 0 1% 0 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .photo-wall .domain-item .domains a img {
+        width: 100%;
+    }
+    .photo-wall .domain-item .domains a:nth-child(even) {
+        margin-right: 0;
+    }
+}
