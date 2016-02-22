@@ -26,13 +26,29 @@
     </foreach>
 </div>
 <script type="text/javascript">
-//    $(".domains").justifiedGallery({
-//        'rowHeight' : 240,
-//        'captions' : true,
-//        'target' : '_blank',
-//        'fixedHeight' : true,
-//        'lastRow' : 'justify',
-//        'margins' : 10
-//    });
+    $resizeAct = function() {
+        $offsetWidth = document.body.clientWidth;
+        if($offsetWidth > 1024) {
+            $(".domains").justifiedGallery({
+                'rowHeight' : 240,
+                'captions' : true,
+                'target' : '_blank',
+                'fixedHeight' : true,
+                'lastRow' : 'justify',
+                'margins' : 10
+            });
+        } else {
+            $('.nav ul li.all a').click(function() {
+                $('.nav ul li.all div').addClass('active');
+            });
+            $('.nav ul li.all div').click(function() {
+                $(this).removeClass('active');
+            });
+            $('*').removeAttr('style');
+        }
+    }();
+    $.event.add(window, 'resize', function() {
+        $resizeAct();
+    });
 </script>
 <include file="Public:footer"/>

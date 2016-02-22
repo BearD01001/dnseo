@@ -482,24 +482,30 @@ html {
     body {
         background: none;
     }
+    .header > a {
+        display: block;
+        width: 200px;
+    }
+    .header .logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 130px;
+        z-index: 3;
+        background: transparent url('../../Img/logo@mobi.png') no-repeat;
+        background-size: auto 50px;
+    }
     .header .slogan {
         display: none;
     }
     .header .contact {
         display: none;
     }
-    .header .logo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 60px;
-        margin-top: 0;
-        z-index: 3;
-    }
     .nav {
         position: fixed;
         top: 0;
-        height: 60px;
+        height: 50px;
     }
     .nav ul li {
         display: none;
@@ -509,23 +515,25 @@ html {
         top: 0;
         right: 0;
         display: block;
-        height: 60px;
-        width: auto;
-        line-height: 60px;
-        padding: 0 30px;
+        height: 50px;
+        width: 60px;
+        margin-right: -10px;
      }
     .nav ul li.all em {
         display: none;
     }
     .nav ul li.all div {
-        display: none;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         bottom: 0;
+        left: 0;
+        display: block;
         width: 100%;
         background: rgba(0, 0, 0, .2);
         opacity: 0;
+        /*z-index: -1;*/
+        pointer-events: none;
         -webkit-transition: opacity .5s;
         -moz-transition: opacity .5s;
         -ms-transition: opacity .5s;
@@ -533,8 +541,9 @@ html {
         transition: opacity .5s;
     }
     .nav ul li.all div.active {
-        display: block;
         opacity: 1;
+        /*z-index: 2;*/
+        pointer-events: auto;
     }
     .nav ul li.all div ul {
         position: absolute;
@@ -563,7 +572,7 @@ html {
     }
     .photo-wall {
         width: auto;
-        margin: -55px 1.5% 0;
+        margin: -70px 1.5% 0;
     }
     .photo-wall .domain-item {
         margin-top: 30px;
@@ -579,8 +588,8 @@ html {
     }
     .photo-wall .domain-item .domains a {
         display: inline-block;
-        width: 49% !important;
-        height: 240px;
+        width: 48.5% !important;
+        height: 48.5vw;
         margin: 0 1% 0 0;
         padding: 0;
         overflow: hidden;
@@ -588,7 +597,18 @@ html {
     .photo-wall .domain-item .domains a img {
         width: 100%;
     }
+    .photo-wall .domain-item .domains a b {
+        font-size: 1em;
+        font-weight: bolder;
+    }
+    .photo-wall .domain-item .domains p {
+        font-size: .8em;
+        line-height: 1.5em;
+    }
     .photo-wall .domain-item .domains a:nth-child(even) {
         margin-right: 0;
+    }
+    .photo-wall .domain-item .domains .no-domain {
+        position: static;
     }
 }

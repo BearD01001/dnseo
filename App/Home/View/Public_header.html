@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>
     <title>{:$homeInfo['name']} - {:$homeInfo['domain']}</title>
     <meta name="keywords" content="{:$homeSEO['keyword']}"/>
     <meta name="description" content="{:$homeSEO['meta_desc']}"/>
@@ -13,7 +14,7 @@
 </head>
 <body>
 	<div class="header">
-		<img class="logo" alt="{:$homeInfo['name']}" src="__PUBLIC__/Img/logo.png">
+		<a href="/"><h1 class="logo">{:$homeInfo['name']}</h1></a>
 		<div class="slogan">{:$homeInfo['slogan']}</div>
 		<div class="contact">
 			<ul>
