@@ -190,7 +190,7 @@ body {
 /* 页脚 */
 .footer {
     margin: 20px;
-    z-index: 3;
+    z-index: 1;
 }
 .links {
     height: 30px;

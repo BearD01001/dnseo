@@ -548,9 +548,9 @@ html {
     .nav ul li.all div ul {
         position: absolute;
         top: 0;
-        right: -16em;
+        right: -10em;
         bottom: 0;
-        width: 16em;
+        width: 10em;
         height: auto !important;
         padding: 0;
         opacity: 1;
@@ -576,6 +576,7 @@ html {
     }
     .photo-wall .domain-item {
         margin-top: 30px;
+        width: 100%;
     }
     .photo-wall .domain-item h3 {
         top: -8px;
@@ -589,13 +590,16 @@ html {
     .photo-wall .domain-item .domains a {
         display: inline-block;
         width: 48.5% !important;
+        height: 200px;
         height: 48.5vw;
-        margin: 0 1% 0 0;
+        margin: 0 1% 10px 0;
+        vertical-align: top;
         padding: 0;
         overflow: hidden;
     }
     .photo-wall .domain-item .domains a img {
         width: 100%;
+        object-fit: cover;
     }
     .photo-wall .domain-item .domains a b {
         font-size: 1em;
@@ -604,6 +608,9 @@ html {
     .photo-wall .domain-item .domains p {
         font-size: .8em;
         line-height: 1.5em;
+    }
+    .photo-wall .domain-item .domains p.img {
+        background: rgba(0,0,0,.2);
     }
     .photo-wall .domain-item .domains a:nth-child(even) {
         margin-right: 0;

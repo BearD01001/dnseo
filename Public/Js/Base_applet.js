@@ -26,8 +26,3 @@ $(function(){
         $(this).html(temp);
     });
 });
-/* niceScroll页面平滑滚动插件 */
-$('html').niceScroll({
-    zindex: 9999,
-    scrollspeed: 50
-});
