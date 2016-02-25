@@ -7,7 +7,7 @@ return array(
         'Admin',
     ),
 	'DEFAULT_GROUP'  => 'Home',
-	'SHOW_PAGE_TRACE' => true, // 输出页面Trace信息
+	'SHOW_PAGE_TRACE' => false, // 输出页面Trace信息
     'SHOW_ERROR_MSG' => true, // 显示报错信息
 	'TMPL_FILE_DEPR' => '_',
     'URL_MODEL' => 1,  //普通模式 0 ,PATHINFO模式 1 ,REWRITE模式 2 ,兼容模式 3
