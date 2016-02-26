@@ -366,3 +366,45 @@
         transform: rotate(390deg);
     }
 }
+@media only screen and (max-width: 1024px) {
+    .main {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+    }
+    .main > span {
+        display: none;
+    }
+    figure > div {
+        display: none;
+    }
+    .main figcaption {
+        position: relative;
+        width: 100%;
+        opacity: 1;
+        padding: 0;
+        overflow: hidden;
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    .main figcaption > span:nth-child(2) {
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: left;
+        text-indent: 10px;
+        transform: none;
+    }
+    .main figcaption > p {
+        padding: 150px 10px 0 10%;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
