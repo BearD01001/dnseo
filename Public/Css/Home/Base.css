@@ -221,3 +221,104 @@ body {
 .stat-code {
     display: none;
 }
+/*
+    移动端头部&导航适配
+*/
+@media only screen and (max-width: 1024px) {
+    body {
+        background: none;
+    }
+    .header {
+        height: 50px;
+        padding: 0;
+    }
+    .header > a {
+        display: block;
+        width: 200px;
+    }
+    .header .logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 130px;
+        z-index: 3;
+        background: transparent url('../../Img/logo@mobi.png') no-repeat;
+        background-size: auto 50px;
+    }
+    .header .slogan {
+        display: none;
+    }
+    .header .contact {
+        display: none;
+    }
+    .nav {
+        position: fixed;
+        top: 0;
+        height: 50px;
+        opacity: .8;
+    }
+    .nav ul li {
+        display: none;
+    }
+    .nav ul li.all {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 50px;
+        width: 60px;
+        margin-right: -10px;
+    }
+    .nav ul li.all em {
+        display: none;
+    }
+    .nav ul li.all div {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background: rgba(0, 0, 0, .2);
+        opacity: 0;
+        /*z-index: -1;*/
+        pointer-events: none;
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        -ms-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+    }
+    .nav ul li.all div.active {
+        opacity: 1;
+        /*z-index: 2;*/
+        pointer-events: auto;
+    }
+    .nav ul li.all div ul {
+        position: absolute;
+        top: 0;
+        right: -10em;
+        bottom: 0;
+        width: 10em;
+        height: auto !important;
+        padding: 0;
+        opacity: 1;
+        -webkit-transition: right .5s;
+        -moz-transition: right .5s;
+        -ms-transition: right .5s;
+        -o-transition: right .5s;
+        transition: right .5s;
+    }
+    .nav ul li.all div.active ul {
+        right: 0;
+    }
+    .nav ul li.all div ul li {
+        display: block;
+        height: auto;
+        font-size: 16px;
+        float: none;
+        opacity: 1;
+    }
+}
