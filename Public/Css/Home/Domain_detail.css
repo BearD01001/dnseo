@@ -407,6 +407,9 @@
         -moz-transform: rotateY(0deg);
         transform: rotateY(0deg);
     }
+    .main figcaption > span:nth-child(1) {
+        display: none;
+    }
     .main figcaption > span:nth-child(2) {
         top: 60px;
         right: 0;
@@ -422,6 +425,7 @@
     .footer {
         position: fixed;
         bottom: 0;
+        width: 100%;
         margin: 0;
         background: rgba(0, 0, 0, .1);
     }
