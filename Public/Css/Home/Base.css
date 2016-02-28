@@ -321,4 +321,15 @@ body {
         float: none;
         opacity: 1;
     }
+    .footer {
+        margin: 0;
+        padding-top: 10px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .links a {
+        color: #E0E0E0;
+    }
+    .copyright {
+        color: #FFF;
+    }
 }
