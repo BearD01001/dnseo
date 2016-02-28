@@ -435,4 +435,11 @@
         padding: 0 0 10px;
         color: #FFF;
     }
+    .main:hover figure div.buy {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
 }
