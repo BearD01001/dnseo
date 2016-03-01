@@ -5,9 +5,9 @@
 /* Web前台通用文件，考虑到执行不必要代码，必需先判断所操作元素是否存在 */
 
 /* 域名展示页背景图 */
-var domainImg = $('.main img');
-$(domainImg).length > 0 ?
-    $('head').append('<style>.main:before { background-image: url("'+ $(domainImg).attr('src') +'") }</style>') : '';
+var $domainImg = $('.main img');
+$domainImg.length > 0 ?
+    $('head').append('<style>.main:before { background-image: url("'+ $domainImg.attr('src') +'") }</style>') : '';
 
 /* 域名展示页景深动画 */
 //var domainImg = $('.main h1 + img');
@@ -20,9 +20,27 @@ $(domainImg).length > 0 ?
 //    }) : '';
 
 /* 无封面域名展示页简介Textarea便签换行处理 */
-$(function(){
+(function(){
     $("p.re-br").each(function() {
         var temp =  $(this).text().replace(/\n|\r\n/g,'<br/>');
         $(this).html(temp);
     });
-});
+})();
+
+/* 域名详情页不够屏高时将footer定位到页面底部 */
+(function() {
+    var $footer = $('.footer');
+    var $resizeFunc = function() {
+        if($(document).height() > parseInt($footer.offset().top) + 74) {
+            $footer.css({'position' : 'fixed', 'bottom': '0'});
+        } else {
+            $footer.css({'position' : '', 'bottom': ''});
+        }
+    };
+    $resizeFunc();
+    $.event.add(window, 'resize', $resizeFunc);
+})();
+
+/* 无图片域名详情页动画溢出修正 */
+var $img = $('.main .domain img');
+$img.length > 0 ? '' : $('.main').css('overflow', 'hidden');

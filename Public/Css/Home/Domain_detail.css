@@ -1,8 +1,6 @@
 @CHARSET "UTF-8";
 .main {
     position: relative;
-    top: 0;
-    left: 0;
 	width: 80%;
 	height: 500px;
 	margin: 73px auto 0;
@@ -427,17 +425,9 @@
         bottom: 0;
         width: 100%;
         margin: 0;
-        background: rgba(0, 0, 0, .1);
     }
     .footer .links {
         height: auto;
-    }
-    .footer .links a {
-        line-height: 30px;
-    }
-    .copyright {
-        padding: 0 0 10px;
-        color: #FFF;
     }
     .main:hover figure div.buy {
         -webkit-transform: none;

@@ -189,18 +189,19 @@ body {
 
 /* 页脚 */
 .footer {
-    margin: 20px;
+    width: 100%;
     z-index: 1;
+    background: rgba(0, 0, 0, .35);
+    padding-top: 10px;
 }
 .links {
-    height: 30px;
 }
 .links a {
     display: inline-block;
     width: 80px;
     height: 30px;
-    line-height: 20px;
-    color: #6C6C6C;
+    line-height: 30px;
+    color: #FFF;
     -webkit-transition: opacity .3s;
     -moz-transition: opacity .3s;
     -ms-transition: opacity .3s;
@@ -215,8 +216,8 @@ body {
 }
 .copyright {
     font-size: 16px;
-    color: #666699;
-    padding: 1em 0 1.5em;
+    padding: 0 0 10px;
+    color: #FFF;
 }
 .stat-code {
     display: none;
@@ -320,11 +321,6 @@ body {
         font-size: 16px;
         float: none;
         opacity: 1;
-    }
-    .footer {
-        margin: 0;
-        padding-top: 10px;
-        background: rgba(0, 0, 0, 0.8);
     }
     .links a {
         color: #E0E0E0;
