@@ -7,14 +7,15 @@ $(document).ready(function() {
         $offsetWidth = document.body.clientWidth;
         if($offsetWidth > 1024) {
             /* PC端首页插件 */
-            $(".domains").justifiedGallery({
+            var $domain = $(".domains");
+            $domain.length > 0 ? $domain.justifiedGallery({
                 'rowHeight' : 240,
                 'captions' : true,
                 'target' : '_blank',
                 'fixedHeight' : true,
                 'lastRow' : 'justify',
                 'margins' : 10
-            });
+            }) : '';
             /* 导航滚动到窗口顶部后固定 */
             $(function() {
                 var elm = $('.nav');
