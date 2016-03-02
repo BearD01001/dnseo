@@ -373,6 +373,7 @@
         padding: 0;
         width: 100%;
         height: 100vh;
+        overflow: hidden;
     }
     /* 无封面域名 */
     .main > span {
@@ -509,7 +510,7 @@
         padding: 5px 10px;
     }
     .main section {
-        top: 40px;
+        top: 30px;
         z-index: 5;
     }
     .main section::before {
