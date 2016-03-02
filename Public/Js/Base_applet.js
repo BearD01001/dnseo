@@ -32,7 +32,7 @@ dinoApplet.domainImg.length > 0 ?
 /* 域名详情页不够屏高时将footer定位到页面底部 */
 (function() {
     var $photoWall = $('.photo-wall');
-    if($photoWall.length > 0) {
+    if($photoWall.length <= 0) {
         var $footer = $('.footer');
         var $resizeFunc = function() {
             ($(document).height() < parseInt($footer.offset().top) + 74) ? '' : $footer.css({'position' : 'fixed', 'bottom': '0'});
