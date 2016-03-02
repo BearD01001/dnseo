@@ -464,7 +464,7 @@
         animation: fading 3s infinite alternate ease-in-out;
     }
     .main > h1 {
-        top: 60px;
+        top: 50px;
         font-size: 36px;
     }
     .main:hover h1 {
@@ -475,7 +475,7 @@
         transform: none;
     }
     .main .domain {
-        top: 155px;
+        top: 120px;
         width: 100%;
         background: #FFF;
     }
@@ -487,9 +487,9 @@
         transform: none;
     }
     .main .domain img {
-        width: 200px;
-        height: 200px;
-        top: -100px;
+        width: 160px;
+        height: 160px;
+        top: -80px;
     }
     .main:hover .domain img {
         -webkit-transform: none;
@@ -499,17 +499,17 @@
         transform: none;
     }
     .main:hover .domain::after {
-        display: none;
         -webkit-animation: none;
         -o-animation: none;
         animation: none;
     }
     .main p {
-        top: 50px;
+        top: 35px;
+        font-size: 12px;
         padding: 5px 10px;
     }
     .main section {
-        top: 60px;
+        top: 40px;
         z-index: 5;
     }
     .main section::before {
