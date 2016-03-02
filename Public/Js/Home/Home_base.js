@@ -41,7 +41,6 @@ $(document).ready(function() {
             $('*').removeAttr('style');
         }
     }();
-
     /* 分类名滚动至导航下后固定，后至翻转替换分类名 */
 //    var itemCon = $('.photo-wall');
 //    $(itemCon).length > 0 ? $(function() {
