@@ -4,10 +4,12 @@
 /* 载入HTML DOM结构后直接运行的部分，不等待图片、框架等加载 */
 /* Web前台通用文件，考虑到执行不必要代码，必需先判断所操作元素是否存在 */
 
+var dinoApplet = {};
+
 /* 域名展示页背景图 */
-var $domainImg = $('.main img');
-$domainImg.length > 0 ?
-    $('head').append('<style>.main:before { background-image: url("'+ $domainImg.attr('src') +'") }</style>') : '';
+dinoApplet.domainImg = $('.main img');
+dinoApplet.domainImg.length > 0 ?
+    $('head').append('<style>.main:before { background-image: url("'+ dinoApplet.domainImg.attr('src') +'") }</style>') : '';
 
 /* 域名展示页景深动画 */
 //var domainImg = $('.main h1 + img');
@@ -29,18 +31,17 @@ $domainImg.length > 0 ?
 
 /* 域名详情页不够屏高时将footer定位到页面底部 */
 (function() {
-    var $footer = $('.footer');
-    var $resizeFunc = function() {
-        if($(document).height() > parseInt($footer.offset().top) + 74) {
-            $footer.css({'position' : 'fixed', 'bottom': '0'});
-        } else {
-            $footer.css({'position' : '', 'bottom': ''});
-        }
-    };
-    $resizeFunc();
-    $.event.add(window, 'resize', $resizeFunc);
+    var $photoWall = $('.photo-wall');
+    if($photoWall.length > 0) {
+        var $footer = $('.footer');
+        var $resizeFunc = function() {
+            ($(document).height() < parseInt($footer.offset().top) + 74) ? '' : $footer.css({'position' : 'fixed', 'bottom': '0'});
+        };
+        $resizeFunc();
+        $.event.add(window, 'resize', $resizeFunc);
+    }
 })();
 
 /* 无图片域名详情页动画溢出修正 */
-var $img = $('.main .domain img');
-$img.length > 0 ? '' : $('.main').css('overflow', 'hidden');
+dinoApplet.domainCover = $('.main .domain img');
+dinoApplet.domainCover.length > 0 ? '' : $('.main').css('overflow', 'hidden');
