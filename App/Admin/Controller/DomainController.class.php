@@ -232,22 +232,30 @@ Class DomainController Extends AdminController {
             $db = M('domain_my');
             $i = 0;
             $time = time();
+            $domains = array();
+            $dN = array();
             while ($i < count($post['domain'])) {
-                list($dk, $domain) = each($post['domain']);
-                list($dek, $desc) = each($post['desc']);
-                list($kk, $keyword) = each($post['keyword']);
-                list($pk, $pic) = each($post['pic']);
-                list($ppk, $price) = each($post['price']);
-                $domains[$i]['domain'] = $dN[] = $domain;
-                $domains[$i]['desc'] = $desc;
-                $domains[$i]['keyword'] = $keyword;
-                $domains[$i]['pic'] = $pic;
+//                list($dk, $domain) = each($post['domain']);
+//                list($dek, $desc) = each($post['desc']);
+//                list($kk, $keyword) = each($post['keyword']);
+//                list($pk, $pic) = each($post['pic']);
+//                list($ppk, $price) = each($post['price']);
+//                $domains[$i]['domain'] = $domain;
+//                $dN[] = $domain;
+//                $domains[$i]['desc'] = $desc;
+//                $domains[$i]['keyword'] = $keyword;
+//                $domains[$i]['pic'] = $pic;
+                $domains[$i]['domain'] = $post['domain'][$i];
+                $dN[] = $post['domain'][$i];
+                $domains[$i]['desc'] = $post['desc'][$i];
+                $domains[$i]['keyword'] = $post['keyword'][$i];
+                $domains[$i]['pic'] = $post['pic'][$i];
                 $domains[$i]['category'] = implode(',', $post['category_' . ($i + 1)]);
                 if(!$domains[$i]['category']) {
                     $this->ajaxReturn(array('status' => 0, 'info' => '请设置域名分类！'));
                     break;
                 }
-                $domains[$i]['price'] = $price;
+                $domains[$i]['price'] = $post['price'][$i];
                 $domains[$i]['time'] = $time;
                 $i++;
             }
@@ -258,6 +266,7 @@ Class DomainController Extends AdminController {
                     break;
                 }
             }
+//            var_dump($domains);die;
             $res = $db->addAll($domains);
             $res ? $this->ajaxReturn(array('status' => 1, 'info' => '批量域名添加成功！')) : $this->ajaxReturn(array('status' => 0, 'info' => '批量域名添加失败！'));
         }
