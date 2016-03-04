@@ -11,6 +11,47 @@ dinoApplet.domainImg = $('.main img');
 dinoApplet.domainImg.length > 0 ?
     $('head').append('<style>.main:before { background-image: url("'+ dinoApplet.domainImg.attr('src') +'") }</style>') : '';
 
+/* 响应式加载首页插件 */
+(function() {
+    var $offsetWidth = document.body.clientWidth;
+    //alert($offsetWidth);
+    if($offsetWidth > 1024) {
+        /* PC端首页插件 */
+        var $domain = $(".domains");
+        $domain.length > 0 ? $domain.justifiedGallery({
+            'rowHeight' : 240,
+            'captions' : true,
+            'target' : '_blank',
+            'fixedHeight' : true,
+            'lastRow' : 'justify',
+            'margins' : 10
+        }) : '';
+        /* 导航滚动到窗口顶部后固定 */
+        $(function() {
+            var elm = $('.nav');
+            var startPos = $(elm).offset().top;
+            $.event.add(window, "scroll", function() {
+                var p = $(window).scrollTop();
+                $(elm).css('position',((p) > startPos) ? 'fixed' : 'absolute');
+                $(elm).css('top',((p) > startPos) ? '0px' : '');
+            });
+        });
+        /* niceScroll页面平滑滚动插件 */
+        $('html').niceScroll({
+            zindex: 9999,
+            scrollspeed: 50
+        });
+    } else { // 移动端设置
+        $('.nav ul li.all a').click(function() {
+            $('.nav ul li.all div').addClass('active');
+        });
+        $('.nav ul li.all div').click(function() {
+            $(this).removeClass('active');
+        });
+        $('*').removeAttr('style');
+    }
+})();
+
 /* 域名展示页景深动画 */
 //var domainImg = $('.main h1 + img');
 //$(domainImg).length > 0 ?
