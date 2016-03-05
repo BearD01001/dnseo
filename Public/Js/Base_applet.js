@@ -24,6 +24,14 @@ dinoApplet.domainImg.length > 0 ?
             'target' : '_blank',
             'fixedHeight' : true,
             'lastRow' : 'justify',
+            'sizeRangeSuffixes' : {
+                'lt100' : '',
+                'lt240' : '',
+                'lt320' : '',
+                'lt500' : '',
+                'lt640' : '',
+                'lt1024' : ''
+            },
             'margins' : 10
         }) : '';
         /* 导航滚动到窗口顶部后固定 */
