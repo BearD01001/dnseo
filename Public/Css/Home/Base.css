@@ -87,6 +87,8 @@ body {
 }
 .nav a {
     color: #FFF;
+    overflow: hidden;
+    height: 50px;
 }
 .nav .cur {
     z-index: 1;
