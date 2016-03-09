@@ -38,7 +38,7 @@ Class LoginController Extends Controller {
                 'logintime' => $nowTime,
                 'loginip' => get_client_ip()
             );
-//            M('admin')->save($data);
+            M('setting_admin')->save($data);
             session('uid', $admin['id']);
             session('username', $admin['username']);
             session('logintime', $admin['logintime']);
