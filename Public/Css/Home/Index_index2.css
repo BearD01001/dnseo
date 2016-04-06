@@ -515,6 +515,12 @@ html {
         font-size: 1em;
         font-weight: bolder;
     }
+    .photo-wall .domain-item .domains a:hover b {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        animation: none;
+    }
     .photo-wall .domain-item .domains p {
         font-size: .8em;
         line-height: 1.5em;
